@@ -10,10 +10,16 @@ public class variaveis: MonoBehaviour {
 
   void Start() {
     // Esta função executa todas as instruções apenas uma vez no primeiro frame do jogo sem parar
+
+    ;
+
+    print(vidaPlayer);
+    nomePlayer = "Marcos";
+    string nomeEnemy = "Darth Vader";
   }
 
   void Update() { 
     // Esta função executa todas as instruções durante a execução do jogo sem parar
-    print(vidaPlayer);
+    nomePlayer = "Fernanda";
   }
 }
