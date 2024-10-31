@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class variaveis: MonoBehaviour {
 
   int numero1, numero2;
+  int vidaPlayer = 100, attackEnemy = 10;
+  int vidaAtual = 40;
 
   void Start() {
     // Esta função executa todas as instruções apenas uma vez no primeiro frame do jogo sem parar
@@ -13,6 +15,8 @@ public class variaveis: MonoBehaviour {
     numero2 = 20;
     Soma();
     Multiplicacao(numero1, numero2);
+    Debug.Log(Subtracao(numero1, numero2));
+    print(CalculaQntdDeGolpesRecebidos());
   }
 
   void Update() { 
@@ -33,5 +37,15 @@ public class variaveis: MonoBehaviour {
     Debug.Log(resultado);
   }
 
+  int Subtracao(int num1, int num2) {
+    int resultado = num1 - num2;
+    return resultado;
+  }
+
+  double CalculaQntdDeGolpesRecebidos(){
+    double resultado = (vidaPlayer - vidaAtual) / attackEnemy;
+
+    return resultado;
+  }
 
 }
