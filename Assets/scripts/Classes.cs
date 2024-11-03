@@ -25,6 +25,14 @@ public class Enemies: MonoBehaviour {
 // Classe Inimigo herdando da classe MonoBehaviour
 public class Inimigo: MonoBehaviour {
   Enemies inimigo = new Enemies(); // Criando um objeto apartir de uma instância da classe Enimies
+  public int força;
+  public string nome;
+
+  // Método construtor
+  public Inimigo(string nome, int força) {
+    this.força = força;
+    this.nome = nome;
+  }
 
   void Start() {
     inimigo.enemyObject = gameObject;
